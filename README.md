@@ -21,9 +21,9 @@ docker build --tag oj_mallocfree https://raw.githubusercontent.com/cupsos/oj_mal
 ```
 * 실행
 ```bash
-docker run --name oj_mallocfree -p 5000:5000 --rm=true -i -t oj_mallocfree
+docker run --name oj_mallocfree -p 127.0.0.1:5000:5000 --rm=true -i -t oj_mallocfree
 ```
 
 ## 주의사항
-C 소스코드를 인증없이 웹으로 받아서 컴파일 후 실행하므로, Native로 구동할 시에는 더욱 주의가 필요합니다. 
+C 소스코드를 인증없이 웹으로 받아서 컴파일 후 실행하므로, Native로 구동할 시에는 더욱 주의가 필요합니다.  
 Native로 구동 시에는 Program.cs를 수정하여 외부IP 접근 불가능하게 하거나, 방화벽에서 TCP:5000 인바운드를 필히 차단하시기 바랍니다. 
